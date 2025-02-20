@@ -1,3 +1,4 @@
+
 /**
  * This file will automatically be loaded by webpack and run in the "renderer" context.
  * To learn more about the differences between the "main" and the "renderer" context in
@@ -29,3 +30,7 @@
 import './index.css';
 
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
+
+document.getElementById('button1').addEventListener('click', () => {
+    window.electronAPI.runTSCommand();
+});
